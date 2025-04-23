@@ -1,0 +1,41 @@
+version: '3.x'
+services:
+  db: 
+    image: postgres
+    container_name: apartment-db
+    restart: always
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: apartment-db
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  backend:
+    build: ./backend
+    container_name: apartment-backend
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://myuser:mypassword@db:5432/apartment-db?schema=public
+    ports:
+      - "6000:6000"
+    volumes: 
+      - ./backend:/app
+    command: sh -c "npx prisma migrate deploy && npm run start"
+  frontend:
+    build: ./frontend
+    container_name: apartment-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    environment:
+      NEXT_PUBLIC_API_URL: http://apartment-backend:6000/api
+volumes:
+  pgdata:
+
+  
