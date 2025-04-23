@@ -20,5 +20,5 @@ RUN npm run prisma:generate
 RUN npm run build
 
 # 8. Expose port and start app
-EXPOSE 6000
+EXPOSE 3001
 CMD ["npm", "run", "start"]

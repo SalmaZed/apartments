@@ -18,7 +18,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const apartments_1 = __importDefault(require("./routes/apartments"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 3001;
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use('/api/apartments', apartments_1.default);

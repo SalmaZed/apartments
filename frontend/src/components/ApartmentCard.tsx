@@ -1,29 +1,12 @@
-interface ApartmentCardProps {
-    address: string;
-    city: string;
-    country: string;
-    unitName: string;
-    rentPrice: number;
-    squareFeet: number;
-  }
-  
-  export default function ApartmentCard({
-    address,
-    city,
-    country,
-    unitName,
-    rentPrice,
-    squareFeet
-  }: ApartmentCardProps) {
-    return (
-      <div className="apartment-card">
-        <h2>{unitName}</h2>
-        <p>{address}</p>
-        <p>{city}, {country}</p>
-        <p>Price: ${rentPrice} / month</p>
-        <p>Square Feet: {squareFeet} sqft</p>
-        <a href={`/apartments/${unitName}`}>View Details</a>
-      </div>
-    );
-  }
-  
+import React from 'react';
+import { Apartment } from '../types/apartment';
+
+export default function ApartmentCard({ apartment }: { apartment: Apartment }) {
+  return (
+    <div className="bg-gray-100 hover:bg-blue-200 shadow-lg rounded-lg p-6 hover:shadow-lg transition">
+      <h2 className="text-xl font-semibold">{apartment.unitName}</h2>
+      <p className="text-gray-700">{apartment.address}, {apartment.city}, {apartment.country}</p>
+      <p className="text-sm text-gray-500">{apartment.squareFeet} sqft - ${apartment.rentPrice}/month</p>
+    </div>
+  );
+}
