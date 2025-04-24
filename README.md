@@ -55,7 +55,8 @@ This web app allows users to manage and view apartment listings. It is built usi
 
 3. Setup the database by running:
    ```bash
-   npx prisma migrate dev
+   npx prisma generate
+   npx prisma migrate dev --name init
 
 3. Run the backend server: 
     ```bash
@@ -67,7 +68,7 @@ You can also run the entire application with Docker Compose for convenience:
 
 From the root of the project, build and start the app:
 
-`docker-compose up --build`
+`docker-compose up`
 
 This will start both the frontend and backend in separate containers. The app should be available at http://localhost:3000/apartments.
 
