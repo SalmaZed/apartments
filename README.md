@@ -6,7 +6,6 @@ This web app allows users to manage and view apartment listings. It is built usi
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Frontend Setup](#frontend-setup)
   - [Backend Setup](#backend-setup)
   - [Running the Application](#running-the-application)
@@ -22,27 +21,18 @@ This web app allows users to manage and view apartment listings. It is built usi
 ## Technologies Used
 
 - **Frontend**: 
-  - Next.js (React Framework)
-  - Tailwind CSS (for styling)
-  - TypeScript (for type safety)
+  - Next.js 
+  - Tailwind CSS
+  - TypeScript
 - **Backend**:
-  - Node.js (for the server)
-  - Express.js (for routing)
-  - Prisma ORM (for database interaction)
-  - SQLite (or PostgreSQL/MySQL for production)
+  - Node.js
+  - Express.js
+  - Prisma ORM
 - **Deployment**: 
-  - Docker (for containerization)
-  - Docker Compose (for managing the full app stack)
+  - Docker
+  - Docker Compose
 
 ## Getting Started
-
-### Prerequisites
-
-Before you begin, make sure you have the following installed:
-
-- [Node.js](https://nodejs.org/en/download/)
-- [Docker](https://www.docker.com/products/docker-desktop) (for containerization)
-- [Docker Compose](https://docs.docker.com/compose/install/) (for managing multi-container applications)
 
 ### Frontend Setup
 
@@ -52,8 +42,7 @@ Before you begin, make sure you have the following installed:
    npm install
 
 3. Run the server: 
-    ```bash
-    npm run dev
+    `npm run dev`
 
     The app should now be accessible at http://localhost:3000.
 
