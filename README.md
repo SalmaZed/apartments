@@ -10,6 +10,7 @@ This web app allows users to manage and view apartment listings. It is built usi
   - [Backend Setup](#backend-setup)
   - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
+- [API Documentation with Swagger](#api-documentation-with-swagger)
 
 ## Features
 
@@ -72,10 +73,16 @@ From the root of the project, build and start the app:
 
 This will start the frontend, backend & db in separate containers. The app should be available at http://localhost:3000/apartments.
 
-## API Endpoints
-### Apartment Endpoints
-- GET /api/apartments: Fetch a list of all apartments.
+## API Documentation with Swagger
 
-- GET /api/apartments/:id: Fetch details for a single apartment by ID.
+This application provides an interactive API documentation using [Swagger](https://swagger.io/), which allows you to easily test and explore the API endpoints.
 
-- POST /api/apartments: Create a new apartment.
+### How to Access Swagger Documentation
+
+Once the backend server is running, you can access the Swagger UI by navigating to: http://localhost:3001/api-docs
+
+### API Endpoints in Swagger
+
+- **GET /api/apartments**: Fetch all apartments
+- **GET /api/apartments/{id}**: Fetch an apartment by its ID
+- **POST /api/apartments**: Create a new apartment
