@@ -34,7 +34,7 @@ services:
     volumes:
       - ./frontend:/app
     environment:
-      NEXT_PUBLIC_API_URL: http://apartment-backend:3001/api
+      NEXT_PUBLIC_API_URL: http://localhost:3001/api
 volumes:
   pgdata:
 
