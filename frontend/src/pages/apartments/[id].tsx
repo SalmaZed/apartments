@@ -5,6 +5,7 @@ interface Props {
   apartment: Apartment;
 }
 
+// Apartment Detail page
 export default function ApartmentDetail({ apartment }: Props) {
   return (
 <main className="px-4 py-8 w-full sm:px-6 md:px-12">
@@ -17,6 +18,7 @@ export default function ApartmentDetail({ apartment }: Props) {
   );
 }
 
+// Fetch apartment details by calling backend apartment detail API
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const id = context.params?.id;
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';

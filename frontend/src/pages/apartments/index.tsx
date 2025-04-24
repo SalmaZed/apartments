@@ -3,10 +3,12 @@ import Link from 'next/link';
 import ApartmentCard from '../../components/ApartmentCard';
 import { Apartment } from '../../types/apartment';
 
+// Apartments Listing page
 export default function ApartmentsList() {
   const [apartments, setApartments] = useState<Apartment[]>([]);
-  const apiUrl = 'http://localhost:3001/api';
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
+// Fetch apartments by calling backend listing API
   useEffect(() => {
     fetch(`${apiUrl}/apartments`)
       .then((res) => res.json())
