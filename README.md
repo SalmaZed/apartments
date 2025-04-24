@@ -70,7 +70,7 @@ From the root of the project, build and start the app:
 
 `docker-compose up`
 
-This will start both the frontend and backend in separate containers. The app should be available at http://localhost:3000/apartments.
+This will start the frontend, backend & db in separate containers. The app should be available at http://localhost:3000/apartments.
 
 ## API Endpoints
 ### Apartment Endpoints
