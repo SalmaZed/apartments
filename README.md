@@ -13,10 +13,10 @@ This web app allows users to manage and view apartment listings. It is built usi
 
 ## Features
 
-- **Apartment Listings**: A list of available apartments with basic details such as the apartment name, rent price, square footage, and location.
+- **Apartment Listings**: A list of available apartments with basic details such as the unit name, number and project name.
 - **Apartment Details**: Clicking on an apartment from the listing redirects to a detailed page with more information.
 - **Responsive Design**: The web app is designed to be mobile-friendly and adjusts seamlessly across different screen sizes.
-- **Backend API**: The backend allows for CRUD operations to manage apartment data (Create, Read, Update, Delete).
+- **Backend API**: The backend allows for some CRUD operations to manage apartment data (Create & Read).
   
 ## Technologies Used
 
