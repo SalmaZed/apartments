@@ -1,6 +1,6 @@
 # Apartments Management Web App
 
-This web app allows users to manage and view apartment listings. It is built using **Next.js** for the frontend and **Node.js** for the backend. The application supports basic functionalities like viewing a list of apartments, viewing detailed apartment information, and managing apartment data.
+This web app allows users to manage and view apartment listings. It is built using Next.js for the frontend and Node.js for the backend.
 
 ## Table of Contents
 - [Features](#features)
